@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MageProfis_Countryofmanufacturefix>
+            <active>true</active>
+            <codePool>local</codePool>
+        </MageProfis_Countryofmanufacturefix>
+    </modules>
+</config>

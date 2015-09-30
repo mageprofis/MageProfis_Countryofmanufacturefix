@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MageProfis_Countryofmanufacturefix>
+            <version>1.0.0.0</version>
+        </MageProfis_Countryofmanufacturefix>
+    </modules>
+    <global>
+        <models>
+            <catalog>
+               <rewrite> <product_attribute_source_countryofmanufacture>MageProfis_Countryofmanufacturefix_Model_Catalog_Product_Attribute_Source_Countryofmanufacture</product_attribute_source_countryofmanufacture>
+                </rewrite>
+            </catalog>
+        </models>
+    </global>
+</config>
