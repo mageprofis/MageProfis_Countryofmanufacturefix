@@ -43,12 +43,12 @@ extends Mage_Eav_Model_Entity_Attribute_Source_Abstract
     {
         $cacheKey = 'COUNTRYOFMANUFACTURE_SELECT_STORE_' . Mage::app()->getStore()->getCode();
         if (Mage::app()->useCache('config') && $cache = Mage::app()->loadCache($cacheKey)) {
-            $options = unserialize($cache);
+            $options = Mage::helper('core')->jsonDecode($cache);
         } else {
             $collection = Mage::getModel('directory/country')->getResourceCollection();
             $options = $collection->toOptionArray();
             if (Mage::app()->useCache('config')) {
-                Mage::app()->saveCache(serialize($options), $cacheKey, array('config'));
+                Mage::app()->saveCache(Mage::helper('core')->jsonEncode($options), $cacheKey, array('config'));
             }
         }
         return $options;
